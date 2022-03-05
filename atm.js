@@ -2,7 +2,7 @@
 
 function validatePin (Pin){
     Pin = prompt("Enter Pin");
-    if (Pin == 1234){
+    if (Pin == 1994){
         if(Pin.length == 4);
             return true;
      } else {
@@ -11,7 +11,7 @@ function validatePin (Pin){
     }
 }
 
-function accountBalance (balance){
+function accountBalance (){
     balance = account.balance;
     return balance;
 }
@@ -23,9 +23,19 @@ function deposit (){
 }
 
 
-function withdrawal (withdrawal){
+function withdrawal (){
     let userInput = prompt("Type amount to withdraw");
+    if (parseInt(withdrawalAmount) <= account.balance){
+        account.balance = account.balance = - parseInt(withdrawalAmount);
+        console.log()
+
+    }
+    
 
 }
 
 
+module.exports.accountBalance = accountBalance;
+module.exports.withdrawal = withdrawal;
+module.exports.validatePin = validatePin;
+module.exports.deposit = deposit;
