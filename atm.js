@@ -25,14 +25,22 @@ function deposit (){
 
 function withdrawal (){
     let userInput = prompt("Type amount to withdraw");
-    if (parseInt(withdrawalAmount) <= account.balance){
-        account.balance = account.balance = - parseInt(withdrawalAmount);
-        console.log()
+    if (parseInt(amountWithdrawn) <= account.balance){
+        account.balance = account.balance = - parseInt(amountWithdrawn);
+        console.log("Amount Withdrawn {amountWithdrawn}");
+        return true;
+    }else if (parseInt(amountWithdrawn) > account.balance){
+        console.log("ERROR CHECK FUNDS");
+        return false;
+    
+
+
+    }
 
     }
     
 
-}
+
 
 
 module.exports.accountBalance = accountBalance;
