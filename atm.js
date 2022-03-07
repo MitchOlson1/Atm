@@ -1,4 +1,6 @@
 "use strict"
+const prompt = require('prompt-sync')();
+const atm = require('./atm');
 
 function validatePin (Pin){
     Pin = prompt("Enter Pin");

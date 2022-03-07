@@ -1,5 +1,23 @@
 "use script"
+const prompt = require('prompt-sync')();
+const atm = require('./atm');
 
+function startAtm(){
+    if (startUser() === true){
+        userMenu();
+    }
+
+}
+startAtm();
+
+function startUser(){
+    console.log("Enter Pin");
+    let start = atm.validatePin();
+    while (start !== true){
+        start = atm.validatePin();
+    }
+    return true
+}
 function userMenu(){
     console.log("Press 1 for Balance; Press 2 for Withdrawal; Press 3 for Deposit; Press 4 for Exit")
     let userInput = prompt();
@@ -12,7 +30,7 @@ function userMenu(){
             userMenu();
             break;
         case "2":
-            atm.Withdrawal();
+            atm.withdrawal();
             userInput = "";
             userMenu();
             break;

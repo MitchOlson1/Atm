@@ -1,7 +1,7 @@
 "use strict"
 
 let individual = {
-    balance = 0,
+    balance = 2000,
     pin = 1994
 }
 
